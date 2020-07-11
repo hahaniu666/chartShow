@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="theme-color" content="#000000">
+  <title>Document</title>
+<link href="7.css" rel="stylesheet"></head>
+<body style="width: 1920px;height: 1080px;background: #0b0f34;transform-origin: left center;">
+<noscript>
+  You need to enable JavaScript to run this app.
+</noscript>
+<div id="root"></div>
+
+<script>
+  function sizeChange() {
+    var ratio = document.querySelector('html').clientWidth / 1920;
+    document.querySelector('body').style.transform = 'scale(' + ratio + ')';
+  }
+
+  window.addEventListener('resize', function () {
+    sizeChange()
+  })
+  sizeChange()
+</script>
+<!--
+  This HTML file is a template.
+  If you open it directly in the browser, you will see an empty page.
+
+  You can add webfonts, meta tags, or analytics to this file.
+  The build step will place the bundled scripts into the <body> tag.
+
+  To begin the development, run `npm start` or `yarn start`.
+  To create a production bundle, use `npm run build` or `yarn build`.
+-->
+<script type="text/javascript" src="commons~app~vendors.b8e5.js"></script><script type="text/javascript" src="vendors~app.b8e5.js"></script><script type="text/javascript" src="app.b8e5.js"></script><script type="text/javascript" src="vendors.b8e5.js"></script></body>
+
+</html>
