@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="theme-color" content="#000000">
+  <title>Document</title>
+<link href="3.css" rel="stylesheet"></head>
+
+<body style="width: 1920px;height: 1080px;background: #0b0f34;transform-origin: left center;">
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root"></div>
+
+  <script>
+    function sizeChange() {
+      // 1.78
+      var ratiow = document.querySelector('html').clientWidth / 1920;
+      var ratioh = document.querySelector('html').clientHeight / 1080;
+
+      const {
+        clientWidth,
+        clientHeight
+      } = document.querySelector('html');
+
+      var screen = clientWidth / clientHeight;
+      document.querySelector('body').style.transform = 'scale(' + ratio + ')';
+      document.querySelector('body').style.transformOrigin = 'left center';
+      // document.querySelector('body').style.overflow = 'hidden';
+      document.querySelector('body').style.margin = '0';
+      document.querySelector('body').style.transition = 'all 0.3s linear 0s';
+      // 如果1920/1080 = 1.78，宽高比大于1.78，则宽比较宽，左右居中，上下撑满
+      console.log('screen', screen)
+      if (screen > 1.78) {
+        var ratio = document.querySelector('html').clientHeight / 1080;
+        document.querySelector('body').style.transform = 'scale(' + ratio + ')';
+        document.querySelector('body').style.transformOrigin = 'center top';
+
+        var marginLeft = (
+          parseFloat(document.querySelector('body').clientWidth) -
+          parseFloat(1920) * ratio
+        ) / 2;
+
+        var marginLeft1 = (
+          parseFloat(document.querySelector('html').clientWidth) -
+          parseFloat(1920) * ratio
+        ) / 2;
+
+        console.log('marginLeft', marginLeft, marginLeft1)
+        document.querySelector('body').style.marginLeft = -(marginLeft - marginLeft1) + 'px';
+      } else {
+        // 如果1920/1080 = 1.78，宽高比小于1.78，则高比较，上下居中，左右撑满
+        var ratio = document.querySelector('html').clientWidth / 1920;
+        document.querySelector('body').style.transform = 'scale(' + ratio + ')';
+        document.querySelector('body').style.transformOrigin = 'left center';
+
+        var marginTop = (
+          parseFloat(document.querySelector('body').clientHeight) -
+          parseFloat(1080) * ratio
+        ) / 2;
+
+        var marginTop1 = (
+          parseFloat(document.querySelector('html').clientHeight) -
+          parseFloat(1080) * ratio
+        ) / 2;
+
+        console.log('marginTop', marginTop, marginTop1)
+        document.querySelector('body').style.marginTop = -(marginTop - marginTop1) + 'px';
+
+      }
+    }
+
+    window.addEventListener('resize', function () {
+      sizeChange()
+    })
+    sizeChange()
+  </script>
+
+  <!-- <script>
+    $(function () {
+
+      //页面缩放公共
+      var resizePage = function () {
+        // 获取window的高度
+        var clientH = $(window).height();
+        // 初始window与body的比值
+        var bi = clientH / $('body').height();
+        // 设置body的宽高-可根据实际情况进行调节
+        $('body').css({
+          width: 1920,
+          height: 1080,
+          overflow: 'hidden',
+          margin: 0
+        });
+        $('body').css('transform', 'scale(' + bi + ')');
+        // body旋转基点设置
+        $('body').css('transform-origin', 'left top 0');
+        // document.documentElement.clientWidth(获取浏览器窗口文档显示区域的宽度，不包括滚动条。)求得body与可视化区域的差值，除以二可得body居中的marginLeft的值
+        var marginLeft = (
+          parseFloat(document.documentElement.clientWidth) -
+          parseFloat($('body').css('width')) * bi
+        ) / 2;
+        // 设置body的marginLeft
+        $('body').css('margin-left', marginLeft + 'px');
+        $('h1').html('现在容器的margin-Left为：' + marginLeft + 'px');
+        // $('html').height(clientH*bi);
+      };
+      resizePage();
+      // resizePage();
+      $(window).resize(resizePage);
+    });
+  </script> -->
+  <!--
+  This HTML file is a template.
+  If you open it directly in the browser, you will see an empty page.
+
+  You can add webfonts, meta tags, or analytics to this file.
+  The build step will place the bundled scripts into the <body> tag.
+
+  To begin the development, run `npm start` or `yarn start`.
+  To create a production bundle, use `npm run build` or `yarn build`.
+-->
+<script type="text/javascript" src="commons~app~vendors.2226.js"></script><script type="text/javascript" src="vendors~app.2226.js"></script><script type="text/javascript" src="app.2226.js"></script><script type="text/javascript" src="vendors.2226.js"></script></body>
+
+</html>
