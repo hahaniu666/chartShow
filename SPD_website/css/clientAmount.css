@@ -1,0 +1,189 @@
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+a{
+  color: transparent;
+  text-decoration: none;
+}
+.margin20{
+  margin-top: 1.125rem;
+}
+.warp-container{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgb(12, 3, 64);
+  background-image: url('../images/empty_bg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.warp-container .header-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:SourceHanSansCN;
+  font-size: 2rem;
+  font-weight:400;
+  width: 97%;
+  height: 7.15%;
+  margin: 0 auto;
+  margin-top:1.0625rem;
+  border: 1px solid #2939D8;
+  text-align: center;
+  color: #01E7F6;
+  position: relative;
+  background:rgba(3,33,255,0.09);
+  position: relative;
+}
+.header-box .back-icon{
+  width: 1.875rem;
+  position: absolute;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.warp-container .header-box .header-icon{
+  width: 4.5rem;
+  height: 1.0625rem;
+}
+.warp-container .header-title > span{
+  height: 7.15%;
+  padding: 0 1.125rem;
+}
+.warp-container .header-box .select-month{
+  font-size: 1rem;
+  width: 20.5%;
+  height: 80%;
+  line-height: 78%;
+  border: 1px solid #01E7F6;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.6875rem;
+  text-align: left;
+  padding-left: 1.125rem;
+  background:rgba(5,117,201,0.58);
+}
+.select-month > input{
+  width: 70%;
+  height: 100%;
+  color: #fff;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+/* placeholder属性设置 */
+input::-webkit-input-placeholder{/* 使用webkit内核的浏览器*/
+  font-family:SourceHanSansCN;
+  color: #01E7F6;
+  font-size: 1rem;
+}
+input:-ms-input-placeholder{ /* IE浏览器 */
+  font-family:SourceHanSansCN;
+  color: #01E7F6;
+  font-size: 1rem;
+}
+.warp-container .header-box .select-month .calendar-icon{
+  width: 2.375rem;
+  position: absolute;
+  right: 1.125rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.warp-container .client-amount{
+  display: flex;
+  justify-content: space-around;
+  width: 97%;
+  height: 56%;
+  border: 1px solid #2939D8;
+  background:rgba(3,33,255,0.09);
+  margin: 1.375rem auto 0;
+}
+.warp-container .client-amount .amount-item{
+  width:31%;
+  height:90%;
+  margin: auto;
+  background-image: url('../images/block_bg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+.warp-container .client-amount .month{
+  font-size: 1.375rem;
+  font-family:Arial;
+  font-weight:400;
+  line-height:1.25rem;
+  color: #fff;
+  padding: .6rem .9rem;
+  background-image:-webkit-linear-gradient(270deg,rgba(0,106,205,1),rgba(0,162,255,1));
+  background-image:linear-gradient(270deg,rgba(0,106,205,1),rgba(0,162,255,1));
+  border-radius: 20px;
+  position: absolute;
+  top: 9.6%;
+  left: 8.3%;
+}
+.warp-container .client-amount .client-img{
+  width: 69%;
+  position: absolute;
+  top: 23.5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.warp-container .client-amount .amount-content{
+  font-size: 1.25rem;
+  font-family:Arial;
+  font-weight:400;
+  color:#fff;
+  text-align: center;
+  width: 84%;
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.warp-container .client-amount .name, .amount{
+  width: 100%;
+  height: 2.2rem;
+  line-height: 2rem;
+  background:#05199B;
+  opacity:0.77;
+  margin: 5px 0;
+}
+.warp-container .table-data{
+  width: 97%;
+  height: 22.22%;
+  border: 1px solid #2939D8;
+  background:rgba(3,33,255,0.09);
+  margin: 2.7rem auto 0;
+  position: relative;
+}
+.table-data .unit{
+  font-size: 1rem;
+  color: #C0EEFF;
+  position: absolute;
+  right: 5.75rem;
+  top: -2rem;
+}
+.table-data .table-title, .data-item{
+  width: 100%;
+  height: 20%;
+  font-family:SourceHanSansCN;
+  font-weight:300;
+  font-size: 1.125rem;
+  color: #01E7F6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.table-data .table-title{
+  border-bottom: 1px solid #2939D8;
+}
+.table-data .table-title > span, .data-item > span{
+  display: inline-block; /*IE10不完全支持flex布局，使用display: inline-block*/
+  font-family:Arial;
+  width: 20%;
+  text-align: center;
+}

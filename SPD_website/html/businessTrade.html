@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>业务交易</title>
+  <link rel="stylesheet" href="../css/businessTrade.css" />
+  <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="../js/divscroll.js"></script>
+  <script type="text/javascript" src="../js/rem.js"></script>
+  <script type="text/javascript" src="../js/echarts.min.js"></script>
+</head>
+
+<body>
+  <!-- 横向2行排列布局 start -->
+  <div class="two-rows warp-container">
+    <!-- 头部 start -->
+    <div class="header-box">
+      <a href="./index.html"><img class="back-icon" src="../images/back.svg" alt=""></a>
+      <div class="banks">
+        <span>微众银行报价</span>
+        <span>百信银行报价</span>
+        <span>商品客户端</span>
+        <span>华泰证券报价</span>
+      </div>
+      <div class="header-title">
+        <img class="header-icon" src="../images/header_icon.png" alt="">
+        <span>业务交易</span>
+        <img class="header-icon" src="../images/header_icon.png" alt="">
+      </div>
+      <div class="select-month">
+        <input type="text" value="" placeholder="按年查询（2019）">
+        <img class="calendar-icon" src="../images/calendar.png" alt="">
+      </div>
+    </div>
+    <!-- 头部 end -->
+    <!-- 产品表格数据 start -->
+    <div class="product-table-data">
+      <div class="table-item flex-container">
+        <img class="left-top-icon" src="../images/topLeft.png" alt="">
+        <img class="right-buttom-icon" src="../images/rightButtom.png" alt="">
+        <div class="product-name">双向贵金属</div>
+        <div class="trade-amount">
+          <span>当年累计交易量&nbsp;&nbsp;&nbsp;&nbsp;123,456</span><span>历史累计交易量&nbsp;&nbsp;&nbsp;&nbsp;234,456</span></div>
+        <div class="table-data flex-left">
+          <div class="table-title">
+            <span class="width20">产品代码</span>
+            <span class="width20">产品名称</span>
+            <span class="width20">时间</span>
+            <span class="width14">买价</span>
+            <span class="width14">卖价</span>
+            <span class="width14">涨幅</span>
+          </div>
+          <div class="data-list1 scrolly"></div>
+        </div>
+      </div>
+      <div class="table-item">
+        <img class="left-top-icon" src="../images/topLeft.png" alt="">
+        <img class="right-buttom-icon" src="../images/rightButtom.png" alt="">
+        <div class="product-name">期货商品</div>
+        <div class="trade-amount">
+          <span>当年累计交易量&nbsp;&nbsp;&nbsp;&nbsp;22,333</span><span>历史累计交易量&nbsp;&nbsp;&nbsp;&nbsp;43,333</span></div>
+        <select name="" id="" class="select-product">
+          <option value="1">商品</option>
+          <option value="2">原油</option>
+        </select>
+        <div class="table-data heightAuto">
+          <div class="table-title">
+            <span class="width16">产品代码</span>
+            <span class="width16">产品名称</span>
+            <span class="width16">时间</span>
+            <span class="width12">买价</span>
+            <span class="width12">卖价</span>
+            <span class="width12">涨幅</span>
+            <span class="width16">合约到期日</span>
+          </div>
+          <div class="data-list2 scrolly"></div>
+        </div>
+      </div>
+      <div class="table-item">
+        <img class="left-top-icon" src="../images/topLeft.png" alt="">
+        <img class="right-buttom-icon" src="../images/rightButtom.png" alt="">
+        <div class="product-name">双向贵金属</div>
+        <div class="trade-amount">
+          <span>当年累计交易量&nbsp;&nbsp;&nbsp;&nbsp;123,456</span><span>历史累计交易量&nbsp;&nbsp;&nbsp;&nbsp;234,456</span></div>
+        <div class="table-data heightAuto">
+          <div class="table-title">
+            <span class="width20">产品代码</span>
+            <span class="width20">产品名称</span>
+            <span class="width20">时间</span>
+            <span class="width14">买价</span>
+            <span class="width14">卖价</span>
+            <span class="width14">涨幅</span>
+          </div>
+          <div class="data-list3 scrolly"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 产品表格数据 end -->
+    <!-- 报价折线图 start -->
+    <div class="price-line-chart">
+      <div class="chart-item">
+        <img class="left-top-icon" src="../images/topLeft.png" alt="">
+        <img class="right-buttom-icon" src="../images/rightButtom.png" alt="">
+        <div class="product-name">人民币金</div>
+        <div class="trade-amount">
+          <span>当年累计交易量&nbsp;&nbsp;&nbsp;&nbsp;1,234</span><span>历史累计交易量&nbsp;&nbsp;&nbsp;&nbsp;2,345</span></div>
+        <p class="trade-amount">当日价格趋势</p>
+        <div class="echartsLineBlock">
+          <div class="echartsLineBlock1"></div>
+        </div>
+      </div>
+      <div class="chart-item">
+        <img class="left-top-icon" src="../images/topLeft.png" alt="">
+        <img class="right-buttom-icon" src="../images/rightButtom.png" alt="">
+        <div class="product-name">美元原油2002</div>
+        <div class="trade-amount">
+          <span>当年累计交易量&nbsp;&nbsp;&nbsp;&nbsp;1,234</span><span>历史累计交易量&nbsp;&nbsp;&nbsp;&nbsp;2,345</span></div>
+        <p class="trade-amount">当日价格趋势</p>
+        <div class="echartsLineBlock">
+          <div class="echartsLineBlock1"></div>
+        </div>
+      </div>
+      <div class="chart-item">
+        <img class="left-top-icon" src="../images/topLeft.png" alt="">
+        <img class="right-buttom-icon" src="../images/rightButtom.png" alt="">
+        <div class="product-name">伦敦铝</div>
+        <div class="trade-amount">
+          <span>当年累计交易量&nbsp;&nbsp;&nbsp;&nbsp;1,234</span><span>历史累计交易量&nbsp;&nbsp;&nbsp;&nbsp;2,345</span></div>
+        <p class="trade-amount">当日价格趋势</p>
+        <div class="echartsLineBlock">
+          <div class="echartsLineBlock1"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 报价折线图 end -->
+  </div>
+  <!-- 横向2行排列布局 end -->
+  <!-- 横向3行排列布局 start -->
+  <div class="three-rows warp-container">
+    <!-- 头部 start -->
+    <div class="header-box">
+      <a href="./index.html"><img class="back-icon" src="../images/back.svg" alt=""></a>
+      <div class="banks">
+        <div>
+          <span>微众银行报价</span>
+          <span>商品客户端</span>
+        </div>
+        <div>
+          <span>百信银行报价</span>
+          <span>华泰证券报价</span>
+        </div>
+      </div>
+      <div class="header-title">
+        <img class="header-icon" src="../images/header_icon.png" alt="">
+        <span>业务交易</span>
+        <img class="header-icon" src="../images/header_icon.png" alt="">
+      </div>
+      <div class="select-month">
+        <input type="text" value="" placeholder="按年查询（2019）">
+        <img class="calendar-icon" src="../images/calendar.png" alt="">
+      </div>
+    </div>
+    <!-- 头部 end -->
+    <!-- 产品表格数据和折线图 start -->
+    <div class="table-and-chart">
+      <div class="table-item flex-container">
+        <img class="left-top-icon" src="../images/topLeft.png" alt="">
+        <img class="right-buttom-icon" src="../images/rightButtom.png" alt="">
+        <div class="product-name">双向贵金属</div>
+        <div class="trade-amount">
+          <span>当年累计交易量&nbsp;&nbsp;&nbsp;&nbsp;123,456</span><span>历史累计交易量&nbsp;&nbsp;&nbsp;&nbsp;234,456</span></div>
+        <div class="table-data flex-left">
+          <div class="table-title">
+            <span class="width20">产品代码</span>
+            <span class="width20">产品名称</span>
+            <span class="width20">时间</span>
+            <span class="width14">买价</span>
+            <span class="width14">卖价</span>
+            <span class="width14">涨幅</span>
+          </div>
+          <div class="data-list1 scrolly"></div>
+        </div>
+      </div>
+      <div class="chart-item">
+        <img class="left-top-icon" src="../images/topLeft.png" alt="">
+        <img class="right-buttom-icon" src="../images/rightButtom.png" alt="">
+        <div class="product-name">人民币金</div>
+        <div class="trade-amount">
+          <span>当年累计交易量&nbsp;&nbsp;&nbsp;&nbsp;1,234</span><span>历史累计交易量&nbsp;&nbsp;&nbsp;&nbsp;2,345</span></div>
+        <p class="trade-amount">当日价格趋势</p>
+        <div class="echartsLineBlock">
+          <div class="echartsLineBlock1"></div>
+        </div>
+      </div>
+    </div>
+    <div class="table-and-chart">
+      <div class="table-item">
+        <img class="left-top-icon" src="../images/topLeft.png" alt="">
+        <img class="right-buttom-icon" src="../images/rightButtom.png" alt="">
+        <div class="product-name">期货商品</div>
+        <div class="trade-amount">
+          <span>当年累计交易量&nbsp;&nbsp;&nbsp;&nbsp;22,333</span><span>历史累计交易量&nbsp;&nbsp;&nbsp;&nbsp;43,333</span></div>
+        <select name="" id="" class="select-product">
+          <option value="1">商品</option>
+          <option value="2">原油</option>
+        </select>
+        <div class="table-data heightAuto heightOther">
+          <div class="table-title">
+            <span class="width16">产品代码</span>
+            <span class="width16">产品名称</span>
+            <span class="width16">时间</span>
+            <span class="width12">买价</span>
+            <span class="width12">卖价</span>
+            <span class="width12">涨幅</span>
+            <span class="width16">合约到期日</span>
+          </div>
+          <div class="data-list2 scrolly"></div>
+        </div>
+      </div>
+      <div class="chart-item">
+        <img class="left-top-icon" src="../images/topLeft.png" alt="">
+        <img class="right-buttom-icon" src="../images/rightButtom.png" alt="">
+        <div class="product-name">美元原油2002</div>
+        <div class="trade-amount">
+          <span>当年累计交易量&nbsp;&nbsp;&nbsp;&nbsp;1,234</span><span>历史累计交易量&nbsp;&nbsp;&nbsp;&nbsp;2,345</span></div>
+        <p class="trade-amount">当日价格趋势</p>
+        <div class="echartsLineBlock">
+          <div class="echartsLineBlock1"></div>
+        </div>
+      </div>
+    </div>
+    <div class="table-and-chart">
+      <div class="table-item">
+        <img class="left-top-icon" src="../images/topLeft.png" alt="">
+        <img class="right-buttom-icon" src="../images/rightButtom.png" alt="">
+        <div class="product-name">双向贵金属</div>
+        <div class="trade-amount">
+          <span>当年累计交易量&nbsp;&nbsp;&nbsp;&nbsp;123,456</span><span>历史累计交易量&nbsp;&nbsp;&nbsp;&nbsp;234,456</span></div>
+        <div class="table-data heightAuto">
+          <div class="table-title">
+            <span class="width20">产品代码</span>
+            <span class="width20">产品名称</span>
+            <span class="width20">时间</span>
+            <span class="width14">买价</span>
+            <span class="width14">卖价</span>
+            <span class="width14">涨幅</span>
+          </div>
+          <div class="data-list3 scrolly"></div>
+        </div>
+      </div>
+      <div class="chart-item">
+        <img class="left-top-icon" src="../images/topLeft.png" alt="">
+        <img class="right-buttom-icon" src="../images/rightButtom.png" alt="">
+        <div class="product-name">伦敦铝</div>
+        <div class="trade-amount">
+          <span>当年累计交易量&nbsp;&nbsp;&nbsp;&nbsp;1,234</span><span>历史累计交易量&nbsp;&nbsp;&nbsp;&nbsp;2,345</span></div>
+        <p class="trade-amount">当日价格趋势</p>
+        <div class="echartsLineBlock">
+          <div class="echartsLineBlock1"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 产品表格数据和折线图 end -->
+  </div>
+  <!-- 横向3行排列布局 end -->
+  <script type="text/javascript">
+    // 双向贵金属数据
+    var myChartList = [];
+    var tableData1 = [{ productCode: 'GLD/CNY', productName: '人民币金', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' },
+    { productCode: 'PDA/CNY', productName: '人民币钯', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' },
+    { productCode: 'PTA/CNY', productName: '人民币铂', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' },
+    { productCode: 'SIL/CNY', productName: '人民币银', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' },
+    { productCode: 'XAG/USD', productName: '美元银', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' },
+    { productCode: 'XAU/USD', productName: '美元金', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' },
+    { productCode: 'XPD/USD', productName: '美元钯', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' },
+    { productCode: 'XPT/USD', productName: '美元铂', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' },
+    { productCode: 'XAG/USD', productName: '美元银', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' },
+    { productCode: 'XAU/USD', productName: '美元金', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' },
+    { productCode: 'XPD/USD', productName: '美元钯', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' },
+    { productCode: 'XPT/USD', productName: '美元铂', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' }];
+    for (var i = 0; i < tableData1.length; i++) {
+      $('.data-list1').append($('<div class="data-item"><span class="width20">' + tableData1[i].productCode + '</span><span class="width20">' + tableData1[i].productName + '</span><span class="width20">' + tableData1[i].time + '</span><span class="width14">' + tableData1[i].buyPrice + '</span><span class="width14">' + tableData1[i].sellPrice + '</span><span class="width14">' + tableData1[i].upPoint + '</span></div>'));
+    }
+    // 期货商品数据
+    var tableData2 = [{ productCode: 'WTI/USD_02', productName: '人民币金', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81', maturityDate: '20200215' },
+    { productCode: 'WTI/USD_03', productName: '人民币钯', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81', maturityDate: '20200215' },
+    { productCode: 'WTI/USD_04', productName: '人民币铂', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81', maturityDate: '20200215' },
+    { productCode: 'WTI/USD_06', productName: '人民币银', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81', maturityDate: '20200215' }];
+    for (var i = 0; i < tableData2.length; i++) {
+      $('.data-list2').append($('<div class="data-item"><span class="width16">' + tableData2[i].productCode + '</span><span class="width16">' + tableData2[i].productName + '</span><span class="width16">' + tableData2[i].time + '</span><span class="width12">' + tableData2[i].buyPrice + '</span><span class="width12">' + tableData2[i].sellPrice + '</span><span class="width12">' + tableData2[i].upPoint + '</span><span class="width16">' + tableData2[i].maturityDate + '</span></div>'));
+    }
+    // 双向贵金属数据
+    var tableData3 = [{ productCode: 'LMEAL3M/USD', productName: '人民币金', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' },
+    { productCode: 'LMECU3M/USD', productName: '人民币钯', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' },
+    { productCode: 'LMENI3M/USD', productName: '人民币铂', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' },
+    { productCode: 'LMEPB3M/USD', productName: '人民币银', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' },
+    { productCode: 'LMESN3M/USD', productName: '美元银', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' },
+    { productCode: 'LMEZN3M/USD', productName: '美元金', time: '10:01:03', buyPrice: '1234', sellPrice: '1234', upPoint: '0.81' }];
+    for (var i = 0; i < tableData3.length; i++) {
+      $('.data-list3').append($('<div class="data-item"><span class="width20">' + tableData3[i].productCode + '</span><span class="width20">' + tableData3[i].productName + '</span><span class="width20">' + tableData3[i].time + '</span><span class="width14">' + tableData3[i].buyPrice + '</span><span class="width14">' + tableData3[i].sellPrice + '</span><span class="width14">' + tableData3[i].upPoint + '</span></div>'));
+    }
+    myChartList = [];
+    for (var i = 0; i < 6; i++) {
+      const myChart = echarts.init(document.getElementsByClassName('echartsLineBlock1')[i]);
+      const option = {
+        tooltip: {
+          show: true,
+        },
+        legend: {
+        },
+        grid: {
+          show: false,
+          top: 20,
+          left: 40,
+          bottom: 20,
+        },
+        dataZoom: [
+          {
+            type: 'inside',
+            xAxisIndex: [0],
+            start: 0,
+            end: 100,
+          },
+          {
+            type: 'inside',
+            yAxisIndex: [0],
+            start: 0,
+            end: 100,
+          }
+        ],
+        xAxis: {
+          type: 'category',
+          data: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00', '24:00', '4:00'],
+          axisLine: {
+            symbol: ['none', 'arrow'],
+            lineStyle: {
+              color: 'white',
+            }
+          },
+          splitLine: {
+            show: false,
+          }
+        },
+        yAxis: {
+          type: 'value',
+          axisLine: {
+            symbol: ['none', 'arrow'],
+            lineStyle: {
+              color: 'white',
+            }
+          },
+          splitLine: {
+            show: false,
+          }
+        },
+        series: [{
+          type: 'line',
+          smooth: 0.6,
+          symbolSize: 10,
+          lineStyle: {
+            color: 'white',
+            width: 1
+          },
+          data: [820, 932, 901, 934, 1290, 1330, 1320, 1800],
+          type: 'line',
+          smooth: true
+        }]
+      };
+      myChart.resize();
+      myChart.setOption(option, true);
+      myChartList.push(myChart);
+    }
+      // window.onresize =()  =>{
+	    // 	return (()=>{
+	    // 		for (var i = 0; i < 6; i++) {
+	    // 			myChartList[i].resize();
+	    // 		}
+	    // 	})()
+	  	// }
+  </script>
+
+  <script type="text/javascript">
+    // 在这里修改id，和速度
+    $(function () {
+      setTimeout(function () {
+        $('.scrolly').perfectScrollbar();
+      }, 100)
+    });
+  </script>
+</body>
+
+</html>

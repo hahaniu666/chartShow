@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品E联盟</title>
+  <link rel="stylesheet" href="../css/index.css" />
+</head>
+
+<body>
+  <div class="warp-container">
+    <div class="center-container">
+      <p class="main-title">商品E联盟</p>
+      <a href="./clientAmount.html">
+        <p class="sub-title">客户信息展示</p>
+      </a>
+      <a href="./businessTrade.html">
+        <p class="sub-title">交易展示</p>
+      </a>
+      <a href="./tradeScale.html">
+        <p class="sub-title">交易规模</p>
+      </a>
+    </div>
+  </div>
+  <script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="../js/rem.js"></script>
+  <script type="text/javascript">
+    function sizeChange() {
+      var ratio = $(window).width() / $(window).height();
+      if (ratio >= 1.9) {
+        // 宽屏（背景图宽度100%）
+        $('.warp-container').css({
+          backgroundSize: '100% auto',
+          backgroundPosition: 'center',
+        });
+      } else {
+        // 窄屏（背景图高度100%）
+        $('.warp-container').css({
+          backgroundSize: 'auto 100%',
+          backgroundPosition: 'center',
+        });
+      }
+    }
+    $(window).resize(function () {
+      sizeChange()
+    });
+    sizeChange()
+  </script>
+</body>
+
+</html>
